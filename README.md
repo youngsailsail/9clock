@@ -1,4 +1,4 @@
-# my-project
+# 9clock
 
 ## Project setup
 ```
