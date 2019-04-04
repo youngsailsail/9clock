@@ -4,28 +4,51 @@
       <div :style="fixStyle" class="filter">
         <p class="title animated fadeIn">欢迎来到九点党科技</p>
       </div>
-      <video :style="fixStyle"
-        autoplay
-        loop
-        class="fillWidth" @canplay="canplay" ref="myVideo">
-        <source  src="../static/1.mp4" type="video/mp4"/>
-        浏览器不支持 video 标签，建议升级浏览器。
-      </video>
+      <video-player
+        :style="fixStyle"
+        :options="playerOptions"
+        :playsinline="true"
+        @ready="playerReadied"
+        ref="myVideo"
+         >
+          浏览器不支持 video 标签，建议升级浏览器。
+      </video-player>
     </div>
   </div>
 </template>
 <script>
+import { videoPlayer } from 'vue-video-player';
+
 export default {
   name: 'login',
+  components: {
+    videoPlayer,
+  },
   data() {
     return {
       fixStyle: '',
+      playerOptions: {
+        muted: true,
+        language: 'en',
+        playbackRates: [0.7, 1.0, 1.5, 2.0],
+        loop: true,
+        sources: [{
+          type: 'video/mp4',
+          src: require('../static/0.mp4'),
+        }],
+        controls: true,
+        preload: 'auto',
+      },
     };
   },
   methods: {
-    canplay() {
-      console.log(12222, this.$refs.myVideo.play);
-      this.$refs.myVideo.play();
+    playerReadied() {
+      this.player.play();
+    },
+  },
+  computed: {
+    player() {
+      return this.$refs.myVideo.player;
     },
   },
   mounted() {

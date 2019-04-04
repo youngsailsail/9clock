@@ -37,7 +37,6 @@ export default {
   computed: {
     nodeDistance() {
       return this.headers && this.headers.map(({ target }) => {
-        console.log(target);
         const node = this.$root.$el.querySelector(target);
         if (!node) return { offsetTop: null };
         const { offsetTop } = node;
@@ -54,8 +53,9 @@ export default {
     toggle(clickNo, target) {
       this.clickNo = clickNo;
       const currentY = document.documentElement.scrollTop || document.body.scrollTop;
-      const { offsetTop } = this.$root.$el.querySelector(target);
-      console.log(currentY, offsetTop, 111);
+      const selectDom = this.$root.$el.querySelector(target);
+      if (!selectDom) return;
+      const { offsetTop } = selectDom;
       scrollAnimation(currentY, offsetTop);
     },
     onScroll() {

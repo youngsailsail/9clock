@@ -6,7 +6,7 @@
                 appear-active-class="animated fadeIn"
                 enter-active-class="animated fadeIn"
                 leave-active-class="animated fadeOut"
-                :duration={enter:500,leave:1000}
+                :duration={enter:500,leave:100}
                 >
       <Propaganda v-if="trailer"></Propaganda>
       <div v-else>
@@ -43,7 +43,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.trailer = false;
-    }, 3000);
+    }, 5000);
   },
 };
 </script>
