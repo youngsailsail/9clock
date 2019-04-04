@@ -6,7 +6,7 @@
                 appear-active-class="animated fadeIn"
                 enter-active-class="animated fadeIn"
                 leave-active-class="animated fadeOut"
-                :duration={enter:500,leave:100}
+                :duration={enter:500,leave:500}
                 >
       <Propaganda v-if="trailer"></Propaganda>
       <div v-else>

@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      fixStyle: '',
+      fixStyle: { display: 'none' },
       playerOptions: {
         muted: true,
         language: 'en',
