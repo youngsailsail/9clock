@@ -5,8 +5,8 @@
       <Headers></Headers>
       <div class="content">
         <div class="content2" id="abstract">
-          <vue-particles :particlesNumber="150"></vue-particles>
           <Abstract></Abstract>
+          <vue-particles :particlesNumber="150"></vue-particles>
         </div>
         <div id="project">
           <Project></Project>

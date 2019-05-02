@@ -14,6 +14,7 @@
         <div id="client">
           <Client></Client>
         </div>
+        <div id="culture"></div>
       </div>
     </div>
   </transition>

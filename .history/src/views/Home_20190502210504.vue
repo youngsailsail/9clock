@@ -4,9 +4,11 @@
     <div v-else>
       <Headers></Headers>
       <div class="content">
-        <div class="content2" id="abstract">
+        <div class="content2">
+          <div id="abstract">
+            <Abstract></Abstract>
+          </div>
           <vue-particles :particlesNumber="150"></vue-particles>
-          <Abstract></Abstract>
         </div>
         <div id="project">
           <Project></Project>
@@ -53,7 +55,6 @@ export default {
 }
 .content2 {
   position: relative;
-  z-index: 2000;
 }
 #particles-js {
   position: absolute;

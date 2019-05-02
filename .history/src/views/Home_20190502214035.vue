@@ -7,6 +7,7 @@
         <div class="content2" id="abstract">
           <vue-particles :particlesNumber="150"></vue-particles>
           <Abstract></Abstract>
+
         </div>
         <div id="project">
           <Project></Project>
