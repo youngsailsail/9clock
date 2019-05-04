@@ -101,7 +101,7 @@ export default {
       {
         key: ".listRight",
         item: {
-          delay: 1500,
+          delay: 1600,
           origin: "right",
           distance: "150px"
         }
@@ -109,7 +109,7 @@ export default {
       {
         key: ".listBottom",
         item: {
-          delay: 1700,
+          delay: 1900,
           origin: "left",
           distance: "150px"
         }
@@ -117,7 +117,7 @@ export default {
       {
         key: ".next",
         item: {
-          delay: 1900,
+          delay: 2200,
           origin: "left",
           distance: "10px"
         }

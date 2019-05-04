@@ -147,7 +147,7 @@ export default {
     }
   }
   .selfImgClass {
-    background: linear-gradient(to bottom right, #ff1100, #ff8500);
+    background: linear-gradient(to bottom right, #ff1100, rgba(255, 0, 0, 1));
     width: 200px;
     height: 200px;
     margin-top: -25px;
