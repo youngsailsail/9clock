@@ -10,9 +10,8 @@
           我们为企业网站提供精准的策划、设计、开发一站式服务方案
         </p>
       </div>
-      <ul @mouseout="mouseout">
-        <li class="reveal-top animated" v-for="(caseItem,index) in caseArr" :key="index" @mouseover.stop="mouseover(index)" :class="{'swing':isHoverIndex===index,
-            hoverLi:isHoverIndex === index}">
+      <ul @mouseout="mouseout" @mouseover.stop>
+        <li class="reveal-top" v-for="(caseItem,index) in caseArr" :key="index" @mouseover.stop="mouseover(index)" :class="{hoverLi:isHoverIndex===index}">
           <img :src="caseItem.iconUrl" v-if="isHoverIndex!==index">
           <span v-else>{{caseItem.label}}</span>
         </li>

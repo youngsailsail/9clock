@@ -103,7 +103,7 @@ export default {
   }
   .imgBox {
     position: absolute;
-    right: 21%;
+    right: 23%;
     top: 76px;
     width: 290px;
     z-index: 1000;

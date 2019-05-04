@@ -26,7 +26,6 @@
 <script>
 const prefix = "https://www.9clock.cn/img/index/";
 import scrollReveal from "scrollreveal";
-import { setTimeout } from "timers";
 export default {
   data() {
     return {
@@ -157,9 +156,7 @@ export default {
       if (this.currentIndex === this.case.length) {
         this.currentIndex = 0;
       }
-      setTimeout(() => {
-        this.isClick = false;
-      }, 1000);
+      // this.isClick = false;
     }
   },
   computed: {

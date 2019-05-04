@@ -50,6 +50,7 @@ export default {
 .content {
   margin-top: 85px;
   background: #f8f8f8;
+  width: 80%;
 }
 .content2 {
   position: relative;

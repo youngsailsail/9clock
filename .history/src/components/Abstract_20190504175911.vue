@@ -18,7 +18,7 @@
     </section>
     <section class="skill" @mouseover="hoverTarget=''" @mouseout="hoverTarget=''">
       <ul>
-        <li class="reveal-top animated" v-for=" (skill) in skills " :key="skill.id" @mouseover.stop="hoverTarget=skill.id" :class="{selfImgClass:hoverTarget === skill.id,'tada':hoverTarget === skill.id}">
+        <li class="reveal-top" v-for=" (skill) in skills " :key="skill.id" @mouseover.stop="hoverTarget=skill.id" :class="{selfImgClass:hoverTarget === skill.id}">
           <img :src="skill.iconUrl"> {{skill.label}}
         </li>
       </ul>
@@ -117,6 +117,7 @@ export default {
       color: white;
       animation-delay: 1s;
       font-size: 14px;
+      line-height: 30px;
     }
   }
 }
@@ -125,14 +126,14 @@ export default {
   background-color: #262d38;
   z-index: 2500;
   position: relative;
+  padding: 0px 15.79%;
   ul {
     height: 100%;
     display: flex;
     justify-content: space-around;
     color: white;
     padding: 0;
-    width: 975px;
-    margin: 0 auto;
+    width: 80%;
   }
   li {
     height: 100%;
@@ -150,7 +151,7 @@ export default {
     background: #ff3300;
     width: 200px;
     height: 200px;
-    margin-top: -25px;
+    margin-top: -75px;
   }
 }
 </style>

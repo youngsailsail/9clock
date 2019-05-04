@@ -15,9 +15,7 @@
           <span class="animated" :class="{'pulse':isClick}">
             <img :src="currentCase.iconUrl" alt="">
           </span>
-          <span class="animated" :class="{'pulse':isClick}">
-            {{currentCase.label}}
-          </span>
+          {{currentCase.label}}
         </li>
       </ul>
     </div>
@@ -26,7 +24,6 @@
 <script>
 const prefix = "https://www.9clock.cn/img/index/";
 import scrollReveal from "scrollreveal";
-import { setTimeout } from "timers";
 export default {
   data() {
     return {
@@ -157,9 +154,7 @@ export default {
       if (this.currentIndex === this.case.length) {
         this.currentIndex = 0;
       }
-      setTimeout(() => {
-        this.isClick = false;
-      }, 1000);
+      // this.isClick = false;
     }
   },
   computed: {
@@ -227,9 +222,9 @@ export default {
         margin-right: 20px;
       }
     }
-  }
-  ul:nth-child(2) {
-    margin-left: -18px;
+    :nth-child(2) {
+      margin-left: -18px;
+    }
   }
 }
 </style>

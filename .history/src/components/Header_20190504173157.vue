@@ -103,13 +103,11 @@ ul {
   color: #707f97;
   list-style: none;
   li {
-    width: 85px;
     cursor: pointer;
     height: 100%;
     display: flex;
     align-items: center;
     font-size: 14px;
-    justify-content: center;
   }
 }
 ul > li:hover {

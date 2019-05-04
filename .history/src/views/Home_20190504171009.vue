@@ -5,7 +5,7 @@
       <Headers></Headers>
       <div class="content">
         <div class="content2" id="abstract">
-          <vue-particles :particlesNumber="150"></vue-particles>
+          <!-- <vue-particles :particlesNumber="150"></vue-particles> -->
           <Abstract></Abstract>
         </div>
         <div id="project">
@@ -48,7 +48,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .content {
-  margin-top: 85px;
+  position: absolute;
+  top: 85px;
   background: #f8f8f8;
 }
 .content2 {

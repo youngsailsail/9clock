@@ -19,7 +19,7 @@
     <section class="skill" @mouseover="hoverTarget=''" @mouseout="hoverTarget=''">
       <ul>
         <li class="reveal-top animated" v-for=" (skill) in skills " :key="skill.id" @mouseover.stop="hoverTarget=skill.id" :class="{selfImgClass:hoverTarget === skill.id,'tada':hoverTarget === skill.id}">
-          <img :src="skill.iconUrl"> {{skill.label}}
+          <img :src="skill.iconUrl" class="animated"> {{skill.label}}
         </li>
       </ul>
     </section>
@@ -103,7 +103,7 @@ export default {
   }
   .imgBox {
     position: absolute;
-    right: 21%;
+    right: 23%;
     top: 76px;
     width: 290px;
     z-index: 1000;

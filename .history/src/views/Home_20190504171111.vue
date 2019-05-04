@@ -48,7 +48,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .content {
-  margin-top: 85px;
+  top: 84px;
   background: #f8f8f8;
 }
 .content2 {

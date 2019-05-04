@@ -11,13 +11,11 @@
         </div>
       </div>
       <ul>
-        <li v-for="(currentCase,index) in currentCaseAry" :key="index" :class="[currentCase.classVal]">
-          <span class="animated" :class="{'pulse':isClick}">
+        <li v-for="(currentCase,index) in currentCaseAry" :key="index" class="animated fadeIn" :class="currentCase.classVal">
+          <span>
             <img :src="currentCase.iconUrl" alt="">
           </span>
-          <span class="animated" :class="{'pulse':isClick}">
-            {{currentCase.label}}
-          </span>
+          {{currentCase.label}}
         </li>
       </ul>
     </div>
@@ -26,13 +24,11 @@
 <script>
 const prefix = "https://www.9clock.cn/img/index/";
 import scrollReveal from "scrollreveal";
-import { setTimeout } from "timers";
 export default {
   data() {
     return {
       scrollReveal: scrollReveal(),
       currentIndex: 0,
-      isClick: false,
       case: [
         [
           {
@@ -152,14 +148,10 @@ export default {
   },
   methods: {
     changeCurrentIndex() {
-      this.isClick = true;
       this.currentIndex += 1;
       if (this.currentIndex === this.case.length) {
         this.currentIndex = 0;
       }
-      setTimeout(() => {
-        this.isClick = false;
-      }, 1000);
     }
   },
   computed: {
@@ -220,16 +212,16 @@ export default {
       color: #010101;
       font-size: 14px;
       box-shadow: 0px 2px 17.82px 0.18px rgba(0, 0, 0, 0.12);
-      padding-left: 43px;
+      padding: 0 43px 0 0;
       margin-bottom: 12px;
       box-sizing: border-box;
       span {
         margin-right: 20px;
       }
     }
-  }
-  ul:nth-child(2) {
-    margin-left: -18px;
+    :nth-child(2) {
+      margin-left: -18px;
+    }
   }
 }
 </style>

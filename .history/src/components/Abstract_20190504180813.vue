@@ -18,7 +18,7 @@
     </section>
     <section class="skill" @mouseover="hoverTarget=''" @mouseout="hoverTarget=''">
       <ul>
-        <li class="reveal-top animated" v-for=" (skill) in skills " :key="skill.id" @mouseover.stop="hoverTarget=skill.id" :class="{selfImgClass:hoverTarget === skill.id,'tada':hoverTarget === skill.id}">
+        <li class="reveal-top" v-for=" (skill) in skills " :key="skill.id" @mouseover.stop="hoverTarget=skill.id" :class="{selfImgClass:hoverTarget === skill.id}">
           <img :src="skill.iconUrl"> {{skill.label}}
         </li>
       </ul>
@@ -103,7 +103,7 @@ export default {
   }
   .imgBox {
     position: absolute;
-    right: 21%;
+    right: 23%;
     top: 76px;
     width: 290px;
     z-index: 1000;
@@ -131,8 +131,6 @@ export default {
     justify-content: space-around;
     color: white;
     padding: 0;
-    width: 975px;
-    margin: 0 auto;
   }
   li {
     height: 100%;
@@ -140,9 +138,11 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 195px;
+    width: 150px;
     cursor: pointer;
     img {
+      width: 49px;
+      height: 36px;
       margin-bottom: 20px;
     }
   }
@@ -150,7 +150,7 @@ export default {
     background: #ff3300;
     width: 200px;
     height: 200px;
-    margin-top: -25px;
+    margin-top: -75px;
   }
 }
 </style>

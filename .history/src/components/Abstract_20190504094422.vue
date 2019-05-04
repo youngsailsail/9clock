@@ -18,7 +18,7 @@
     </section>
     <section class="skill" @mouseover="hoverTarget=''" @mouseout="hoverTarget=''">
       <ul>
-        <li class="reveal-top animated" v-for=" (skill) in skills " :key="skill.id" @mouseover.stop="hoverTarget=skill.id" :class="{selfImgClass:hoverTarget === skill.id,'tada':hoverTarget === skill.id}">
+        <li class="reveal-top" v-for=" (skill) in skills " :key="skill.id" @mouseover.stop="hoverTarget=skill.id" :class="{selfImgClass:hoverTarget === skill.id}">
           <img :src="skill.iconUrl"> {{skill.label}}
         </li>
       </ul>
@@ -103,15 +103,13 @@ export default {
   }
   .imgBox {
     position: absolute;
-    right: 21%;
-    top: 76px;
+    right: 25%;
     width: 290px;
+       top: 168px;
     z-index: 1000;
     img {
       animation-delay: 0.5s;
       width: 263px;
-      height: 257px;
-      margin-bottom: 7px;
     }
     .banner__effect2 {
       color: white;
@@ -125,14 +123,13 @@ export default {
   background-color: #262d38;
   z-index: 2500;
   position: relative;
+  padding: 0px 15.79%;
   ul {
     height: 100%;
     display: flex;
     justify-content: space-around;
     color: white;
     padding: 0;
-    width: 975px;
-    margin: 0 auto;
   }
   li {
     height: 100%;
@@ -140,9 +137,11 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 195px;
+    width: 150px;
     cursor: pointer;
     img {
+      width: 49px;
+      height: 36px;
       margin-bottom: 20px;
     }
   }
@@ -150,7 +149,7 @@ export default {
     background: #ff3300;
     width: 200px;
     height: 200px;
-    margin-top: -25px;
+    margin-top: -75px;
   }
 }
 </style>

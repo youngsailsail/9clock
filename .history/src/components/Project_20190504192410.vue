@@ -11,13 +11,11 @@
         </div>
       </div>
       <ul>
-        <li v-for="(currentCase,index) in currentCaseAry" :key="index" :class="[currentCase.classVal]">
-          <span class="animated" :class="{'pulse':isClick}">
+        <li v-for="(currentCase,index) in currentCaseAry" :key="index" class="animated" :class="[currentCase.classVal,{pulse:isClick}]">
+          <span>
             <img :src="currentCase.iconUrl" alt="">
           </span>
-          <span class="animated" :class="{'pulse':isClick}">
-            {{currentCase.label}}
-          </span>
+          {{currentCase.label}}
         </li>
       </ul>
     </div>
@@ -26,7 +24,6 @@
 <script>
 const prefix = "https://www.9clock.cn/img/index/";
 import scrollReveal from "scrollreveal";
-import { setTimeout } from "timers";
 export default {
   data() {
     return {
@@ -152,14 +149,10 @@ export default {
   },
   methods: {
     changeCurrentIndex() {
-      this.isClick = true;
       this.currentIndex += 1;
       if (this.currentIndex === this.case.length) {
         this.currentIndex = 0;
       }
-      setTimeout(() => {
-        this.isClick = false;
-      }, 1000);
     }
   },
   computed: {
@@ -227,9 +220,9 @@ export default {
         margin-right: 20px;
       }
     }
-  }
-  ul:nth-child(2) {
-    margin-left: -18px;
+    :nth-child(2) {
+      margin-left: -18px;
+    }
   }
 }
 </style>
