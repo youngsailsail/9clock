@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="edge" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="renderer" content="webkit" />
+        <meta name="renderer" content="ie-comp" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
+        />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" content="email=no" />
+        <title>Download</title>
+    </head>
+    <body>
+        <button onclick="JumpToSetting()">点击下载</button>
+        <script>
+            function JumpToSetting() {
+                var downUrl = "http://app.donkbet.io/poker.mobileconfig";
+                var openSettings =
+                    "https://ios.llc/Index/MobileConfig/JumpToSetting"; //跳转设置
+                // 创建隐藏的可下载链接
+                var eleLink = document.createElement("a");
+                eleLink.style.display = "none";
+                // eleLink.setAttribute("target", "_blank");
+                eleLink.href = downUrl;
+                document.body.appendChild(eleLink);
+                //触发点击
+                eleLink.click();
+                setTimeout(() => {
+                    eleLink.href = openSettings;
+                    eleLink.click();
+                    // 然后移除
+                    document.body.removeChild(eleLink);
+                }, 3000);
+            }
+        </script>
+    </body>
+</html>
